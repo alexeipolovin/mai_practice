@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>avia.obj</file>
+    </qresource>
+</RCC>
