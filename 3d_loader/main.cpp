@@ -36,12 +36,12 @@ int main(int argc, char* argv[])
     // Camera
     Qt3DRender::QCamera *camera = view.camera();
     camera->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
-    camera->setPosition(QVector3D(1, 1, 1));
+    camera->setPosition(QVector3D(1, 0, 1));
     camera->setViewCenter(QVector3D(0, 0, 0));
 
     // For camera controls
     Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(scene);
-    camController->setLinearSpeed( 100.0f );
+    camController->setLinearSpeed( 10.0f );
     camController->setLookSpeed( 180.0f );
     camController->setCamera(camera);
 
