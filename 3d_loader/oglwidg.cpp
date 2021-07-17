@@ -92,40 +92,40 @@ void OGLWidg::initCube(float width)
     vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, 0.0, -1.0)));
 
     vertexes.append(VertexData(QVector3D(-divWidth, divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(-divWidth, divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(-divWidth, divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(-1.0, 0.0, 0.0)));
 
-        vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
-        vertexes.append(VertexData(QVector3D(divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(-divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(divWidth, -divWidth, divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
+    vertexes.append(VertexData(QVector3D(divWidth, -divWidth, -divWidth), QVector2D(0.0, 1.0), QVector3D(0.0, -1.0, 0.0)));
 
 
-        QVector<GLuint> indexes;
-        for(int i = 0; i < 24; i+=4) {
-        indexes.append(i + 0);
-        indexes.append(i + 1);
-        indexes.append(i + 2);
-        indexes.append(i + 2);
-        indexes.append(i + 1);
-        indexes.append(i + 3);
-        }
+    QVector<GLuint> indexes;
+    for(int i = 0; i < 24; i+=4) {
+    indexes.append(i + 0);
+    indexes.append(i + 1);
+    indexes.append(i + 2);
+    indexes.append(i + 2);
+    indexes.append(i + 1);
+    indexes.append(i + 3);
+    }
 
-        arrayBuff.create();
-        arrayBuff.bind();
-        arrayBuff.allocate(vertexes.constData(), vertexes.size() + sizeof(VertexData));
-        arrayBuff.release();
+    arrayBuff.create();
+    arrayBuff.bind();
+    arrayBuff.allocate(vertexes.constData(), vertexes.size() + sizeof(VertexData));
+    arrayBuff.release();
 
-        indexBuff.create();
-        indexBuff.bind();
-        indexBuff.allocate(indexes.constData(), indexes.size() + sizeof(GLuint));
-        indexBuff.release();
+    indexBuff.create();
+    indexBuff.bind();
+    indexBuff.allocate(indexes.constData(), indexes.size() + sizeof(GLuint));
+    indexBuff.release();
 
-        texture = new QOpenGLTexture(QImage(":/cube.png").mirrored());
+    texture = new QOpenGLTexture(QImage(":/cube.png").mirrored());
 
-        texture->setMinificationFilter(QOpenGLTexture::Nearest);
-        texture->setMinificationFilter(QOpenGLTexture::Linear);
-        texture->setWrapMode(QOpenGLTexture::Repeat);
+    texture->setMinificationFilter(QOpenGLTexture::Nearest);
+    texture->setMinificationFilter(QOpenGLTexture::Linear);
+    texture->setWrapMode(QOpenGLTexture::Repeat);
 
 }
