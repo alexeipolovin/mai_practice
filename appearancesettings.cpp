@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#include "src/headers/appearancesettings.h"
-#include "src/headers/untextedit.h"
+#include "appearancesettings.h"
+#include "untextedit.h"
 #include <QDebug>
 #include <QFontDialog>
 #include <QLineEdit>

@@ -1,4 +1,4 @@
-#include "src/headers/untextedit.h"
+#include "untextedit.h"
 
 #include <QFileDialog>
 #include <QFile>
@@ -6,7 +6,7 @@
 #include <QTextDocumentFragment>
 #include <QSettings>
 #include <QKeyEvent>
-#include <src/headers/appearancesettings.h>
+#include <appearancesettings.h>
 #include <QMessageBox>
 
 #define BOLD_OPEN_HTML "<b>"

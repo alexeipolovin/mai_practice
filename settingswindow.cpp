@@ -1,8 +1,8 @@
-#include "src/headers/settingswindow.h"
+#include "settingswindow.h"
 
 #include <QLabel>
 #include <QPushButton>
-#include <src/headers/appearancesettings.h>
+#include "appearancesettings.h"
 #include <QDebug>
 
 

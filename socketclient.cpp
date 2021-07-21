@@ -1,4 +1,4 @@
-#include "src/headers/socketclient.h"
+#include "socketclient.h"
 #include <QtCore/QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
