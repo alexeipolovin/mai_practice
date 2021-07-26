@@ -80,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug() << text;
         if(text == "HTML")
         {
-            QMessageBox::warning(nullptr, "Warning", "HTML is in beta");
+//            QMessageBox::warning(nullptr, "Warning", "HTML is in beta");
             textEdit->setTextType(1);
             settings->setValue(TYPE_SETTINGS, 1);
         } else if(text == "MarkDown")
@@ -276,7 +276,7 @@ MainWindow::MainWindow(QWidget *parent)
     if(settings->value("lasteditedfile").toString() != "")
     {
         qDebug() << settings->value("lasteditedfile").toString();
-        this->textEdit->openLastFile(settings->value("lasteditedfile").toString());
+//        this->textEdit->openLastFile(settings->value("lasteditedfile").toString());
         textEdit->setFileName(settings->value("lasteditedfile").toString());
         setWindowTitle(textEdit->getFileName() + STANDART_TITLE_EDITED);
     }

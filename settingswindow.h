@@ -36,7 +36,6 @@ private:
 
     QHBoxLayout *mainLayout;
     QVBoxLayout *settingsTreeLayout;
-    // fuck, it's just a start
     QVBoxLayout *textEditorSettingsLayout;
 
 public:
